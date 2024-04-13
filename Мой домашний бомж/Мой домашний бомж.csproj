@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A64F247B-6283-47C5-88B2-0CE2D92BE549}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Мой_домашний_бомж</RootNamespace>
+    <AssemblyName>Мой домашний бомж</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Sqlite, Version=8.0.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Sqlite.Core.8.0.4\lib\netstandard2.0\Microsoft.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLite-net, Version=1.8.116.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sqlite-net-pcl.1.8.116\lib\netstandard2.0\SQLite-net.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.batteries_v2, Version=2.1.8.2226, Culture=neutral, PublicKeyToken=8226ea5df37bcae9, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.bundle_green.2.1.8\lib\net461\SQLitePCLRaw.batteries_v2.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.core, Version=2.1.8.2226, Culture=neutral, PublicKeyToken=1488e028ca7ab535, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.core.2.1.8\lib\netstandard2.0\SQLitePCLRaw.core.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.dynamic_cdecl, Version=2.1.8.2226, Culture=neutral, PublicKeyToken=b68184102cba0b3b, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.dynamic_cdecl.2.1.8\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll</HintPath>
+    </Reference>
+    <Reference Include="SQLitePCLRaw.provider.e_sqlite3, Version=2.1.8.2226, Culture=neutral, PublicKeyToken=9c301db686d0bd12, processorArchitecture=MSIL">
+      <HintPath>..\packages\SQLitePCLRaw.provider.e_sqlite3.2.1.8\lib\netstandard2.0\SQLitePCLRaw.provider.e_sqlite3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseServiceUser.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background city Seamless clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alcohol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drink.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vape.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medicine.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\weapon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hope.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redbull.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\первыйпоза.png" />
+    <None Include="Resources\первыйпьетвтор.png" />
+    <None Include="Resources\первыйпьетпер.png" />
+    <None Include="Resources\первыйколится.png" />
+    <None Include="Resources\первыймолитсявтор.png" />
+    <None Include="Resources\первыймолитсяпер.png" />
+    <None Include="Resources\первыйлежит.png" />
+    <None Include="Resources\первыйсидит.png" />
+    <None Include="Resources\лежит.png" />
+    <None Include="Resources\сидит.png" />
+    <None Include="Resources\1551530794_supergif.gif" />
+    <None Include="Resources\1687525867_bogatyr-club-p-pikselnii-gorod-foni-vkontakte-5.jpg" />
+    <Content Include="Resources\a4.jpg" />
+    <Content Include="Resources\anarhia.jpg" />
+    <Content Include="Resources\angus.jpg" />
+    <Content Include="Resources\ararat.jpg" />
+    <Content Include="Resources\astra.jpg" />
+    <Content Include="Resources\babka.jpg" />
+    <None Include="Resources\BackgroundcitySeamlessSoBroken.tif" />
+    <None Include="Resources\BackgroundcitySeamlessBroken.jpg" />
+    <None Include="Resources\BackgroundcitySeamlessclear.png" />
+    <Content Include="Resources\baltika.jpg" />
+    <Content Include="Resources\bita.jpg" />
+    <Content Include="Resources\borjomi.jpg" />
+    <Content Include="Resources\caran.jpg" />
+    <Content Include="Resources\chapman.jpg" />
+    <Content Include="Resources\cola.jpg" />
+    <None Include="Resources\drotik.jpg" />
+    <Content Include="Resources\family.jpg" />
+    <Content Include="Resources\ficalii.jpg" />
+    <Content Include="Resources\freeze.jpg" />
+    <Content Include="Resources\golub.jpg" />
+    <Content Include="Resources\grifon.jpg" />
+    <Content Include="Resources\gvozdomet.jpg" />
+    <Content Include="Resources\hinkali.jpg" />
+    <None Include="Resources\homeless.png" />
+    <None Include="Resources\homeless1.png" />
+    <Content Include="Resources\hotspot.jpg" />
+    <Content Include="Resources\jertva.jpg" />
+    <Content Include="Resources\kastet.jpg" />
+    <Content Include="Resources\koshka.jpg" />
+    <Content Include="Resources\krisa.jpg" />
+    <Content Include="Resources\krutka.jpg" />
+    <Content Include="Resources\lirica.jpg" />
+    <Content Include="Resources\lyga.jpg" />
+    <Content Include="Resources\macarov.jpg" />
+    <Content Include="Resources\mechet.jpg" />
+    <Content Include="Resources\minsk.jpg" />
+    <Content Include="Resources\morphine.jpg" />
+    <Content Include="Resources\musulman.jpg" />
+    <Content Include="Resources\nospa.jpg" />
+    <Content Include="Resources\omavaika.jpg" />
+    <Content Include="Resources\pelmeni.jpg" />
+    <Content Include="Resources\pepsi.jpg" />
+    <Content Include="Resources\plazmenay.jpg" />
+    <Content Include="Resources\podorojnik.jpg" />
+    <Content Include="Resources\pomolitca.jpg" />
+    <Content Include="Resources\ponchiki.jpg" />
+    <Content Include="Resources\rozochka.jpg" />
+    <Content Include="Resources\samagon.jpg" />
+    <Content Include="Resources\secta.jpg" />
+    <Content Include="Resources\shaurma.jpg" />
+    <Content Include="Resources\shishki.jpg" />
+    <Content Include="Resources\sobaka.jpg" />
+    <Content Include="Resources\sobranie.jpg" />
+    <Content Include="Resources\spirt.jpg" />
+    <Content Include="Resources\svayk.jpg" />
+    <Content Include="Resources\svytou.jpg" />
+    <Content Include="Resources\tarakan.jpg" />
+    <Content Include="Resources\viski.jpg" />
+    <Content Include="Resources\xanax.jpg" />
+    <Content Include="Resources\ygol.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
